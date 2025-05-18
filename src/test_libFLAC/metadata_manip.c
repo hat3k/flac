@@ -270,7 +270,7 @@ static void set_file_stats_(const char *filename, struct flac_stat_s *stats)
 	FLAC__ASSERT(0 != filename);
 	FLAC__ASSERT(0 != stats);
 
-	(void)flac_chmod(filename, stats->st_mode);
+	// (void)flac_chmod(filename, stats->st_mode);
 	(void)flac_utime(filename, &srctime);
 #if !defined _MSC_VER && !defined __MINGW32__
 	FLAC_CHECK_RETURN(chown(filename, stats->st_uid, -1));

@@ -87,7 +87,7 @@ static void set_file_stats_(const char *filename, struct flac_stat_s *stats)
 	FLAC__ASSERT(0 != filename);
 	FLAC__ASSERT(0 != stats);
 
-	(void)flac_chmod(filename, stats->st_mode);
+	// (void)flac_chmod(filename, stats->st_mode);
 }
 
 static FLAC__bool append_tag_(FLAC__StreamMetadata *block, const char *format, const FLAC__byte *name, float value)

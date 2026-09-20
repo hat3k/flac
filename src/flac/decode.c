@@ -410,7 +410,7 @@ FLAC__bool DecoderSession_process(DecoderSession *d)
 	if(d->abort_flag)
 		return false;
 
-	if(!d->test_only && !d->analysis_mode && d->fout == 0) {
+	if(!d->test_only && d->fout == 0) {
 		if(0 == strcmp(d->outfilename, "-")) {
 			d->fout = grabbag__file_get_binary_stdout();
 		}
